@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://facilistravel.co.za/sitemap.xml
