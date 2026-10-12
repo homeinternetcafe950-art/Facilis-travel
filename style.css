@@ -1,9 +1,9 @@
 
-:root{--navy:#0b3d5c;--teal:#0e7c86;--orange:#f28c28;--bg:#fff;--alt:#f2f7f9;--tx:#1b2a33;--mu:#5b6b75;--bd:#d9e3e8;--r:14px}
-@media(prefers-color-scheme:dark){:root{--bg:#0f1a20;--alt:#15252d;--tx:#e8f0f3;--mu:#9bb0ba;--bd:#26404c}}
+:root{--navy:#0b3d5c;--teal:#0e7c86;--link:#0e7c86;--orange:#f28c28;--bg:#fff;--alt:#f2f7f9;--tx:#1b2a33;--mu:#5b6b75;--bd:#d9e3e8;--r:14px}
+@media(prefers-color-scheme:dark){:root{--link:#4cc0cc;--bg:#0f1a20;--alt:#15252d;--tx:#e8f0f3;--mu:#9bb0ba;--bd:#26404c}}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--tx);background:var(--bg);padding-bottom:64px}
-img{max-width:100%;height:auto}a{color:var(--teal)}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--tx);background:var(--bg);padding-bottom:84px}
+img{max-width:100%;height:auto}a{color:var(--link)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
 .skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
 .hdr{position:sticky;top:0;background:var(--navy);z-index:20;padding-top:env(safe-area-inset-top,0)}
@@ -13,14 +13,14 @@ img{max-width:100%;height:auto}a{color:var(--teal)}
 #nav{display:none;width:100%;flex-direction:column;gap:4px;padding:8px 0 14px}#nav.open{display:flex}
 #nav a{color:#fff;text-decoration:none;padding:12px 4px;min-height:44px}
 .btn{display:inline-block;background:var(--orange);color:#1b1b1b!important;font-weight:700;padding:12px 20px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;min-height:44px;font-size:1rem;text-align:center}
-.btn.ghost{background:transparent;border:2px solid currentColor;color:var(--teal)!important}#nav .btn.ghost{color:#fff!important}
+.btn.ghost{background:transparent;border:2px solid currentColor;color:var(--link)!important}#nav .btn.ghost{color:#fff!important}
 .btn.big{padding:14px 26px;font-size:1.05rem;margin:4px 0}
 .hero{background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;padding:44px 0}
 .hero h1{font-size:clamp(1.8rem,6vw,3rem);line-height:1.15;margin:0 0 12px}.lead{font-size:1.1rem;max-width:620px;opacity:.95}
 .hero .btn.ghost{color:#fff!important}
 .sec{padding-top:34px;padding-bottom:34px}.alt{background:var(--alt)}h2{font-size:1.5rem;margin:0 0 16px}
 .grid{display:grid;gap:16px;grid-template-columns:1fr}
-.card{border:1px solid var(--bd);border-radius:var(--r);padding:18px;background:var(--bg)}.card h3{margin:.2em 0}.price{font-weight:700;color:var(--teal)}
+.card{border:1px solid var(--bd);border-radius:var(--r);padding:18px;background:var(--bg)}.card h3{margin:.2em 0}.price{font-weight:700;color:var(--link)}
 .steps{list-style:none;counter-reset:s;padding:0;display:grid;gap:12px}
 .steps li{counter-increment:s;display:flex;flex-direction:column;border-left:4px solid var(--orange);padding:6px 0 6px 14px}
 .steps li:before{content:"Step " counter(s);font-size:.8rem;color:var(--mu)}.steps span{color:var(--mu)}
@@ -44,3 +44,14 @@ input,select,textarea{font:inherit;padding:12px;border:1px solid var(--bd);borde
 @media(min-width:1000px){.grid.g2{grid-template-columns:repeat(2,1fr)}.grid.g3{grid-template-columns:repeat(3,1fr)}}
 .ticks{padding-left:20px}.ticks li{margin:6px 0}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.hdr :focus-visible,.ftr :focus-visible,.mbar :focus-visible,.hero :focus-visible,.cta :focus-visible{outline-color:#fff}
+.crumbs{font-size:.88rem;margin:0 0 10px;opacity:.95}.crumbs a{color:#fff}
+.hero .btn.big{margin-right:6px}
+.status{padding:12px 14px;border:1px solid var(--bd);border-left:4px solid var(--teal);border-radius:10px;background:var(--alt)}
+.status.err{border-left-color:#c0392b}.status p{margin:0 0 8px}.status p:last-child{margin-bottom:0}
+.ticks a{overflow-wrap:anywhere}
+.prose a{overflow-wrap:anywhere}
+@media(min-width:760px){body{padding-bottom:0}}
